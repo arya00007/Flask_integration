@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+    <style>
+         /*body{
+            background-image: url(background.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto;
+        } */
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+       
+
+        .container {
+            /* The image used */
+            background-image: url("../static/background.jpg");
+
+            /* Full height */
+            /*height: 100%; */
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            font-size: 71px;
+            background: -webkit-linear-gradient(#fff6f6, #cd9494);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        form {
+
+            background-color: #8EC5FC;
+            background-image: linear-gradient(318deg, #000b16 0%, #E0C3FC 100%);
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            height: 100%;
+            width: 400px;
+            z-index: 1;
+        }
+
+        input {
+            width: 190px;
+        }
+
+        select {
+            width: 200px;
+        }
+
+        label {
+            color: white;
+            font-family: sans-serif;
+            padding: 10px 0px;
+        }
+
+        button {
+            margin: 20px 0px;
+        }
+
+
+
+        .btn-grad {
+            background-image: linear-gradient(to right, #733bb3c9 0%, #79CBCA 51%, #448fe8c2 100%);
+            margin: 53px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.1s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 10px #eeeeee54;
+            border-radius: 53px;
+            display: block;
+            border: none;
+        }
+
+        .btn-grad:hover {
+            background-position: right center;
+            /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <style>
+        /*body {
+         
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-size: auto;
+         background-attachment: fixed;
+         background-image: url("bk.jpg");
+        } */
+        </style>
+
+
+    <div class="container">
+
+        <h1>Please Fill up All The Sections</h1>
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <label for="Age">Age</label>
+            <input id="first" name="Age" type="number" >
+
+            <label for="Gender">Gender</label>
+            <select name="Gender" id="Gender">
+                <option value="None">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+
+            <label for="Marital Status">Marital Status</label>
+            <select name="Marital status" id="">
+                <option value="None">Select</option>
+                <option value="Married">Married</option>
+                <option value="Unmarried">Unmarried</option>
+            </select>
+
+            <label for="Profession">Profession</label>
+            <select id="fourth" name="Profession" required="required">    
+                <option value="none">Select</option>
+                <option value="Student">Student</option>
+                <option value="Employed">Employed</option>
+                <option value="Unemployed">Unemployed</option>
+            </select>
+
+            <label for="Living with family?">Living with family?</label>
+            <select name="Living With Family" id="">
+                <option value="None">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+
+            <label for="Sleeping Duration">Sleeping Duration</label>
+            <select name="Sleeping Duration" id="">
+                <option value="None">Select</option>
+                <option value="8-10 hours">8-10 hours</option>
+                <option value="6-8 hours">6-8 hours</option>
+                <option value="4-6 hours">4-6 hours</option>
+                <option value="2-4 hours">2-4 hours</option>
+            </select>
+
+            <label for="Tested Positive For COVID?">Tested Positive For COVID?</label>
+            <select name="Tested Positive For COVID" id="">
+                <option value="None">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+
+            <label for="Depression Problems From Past">Depression Problems From Past</label>
+            <select name="Depression Problems From Past" id="">
+                <option value="None">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="Still Having Depression">Still Having Depression</label>
+            <select name="Still Having Depression" id="">
+                <option value="None">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="Depression tenure">Depression tenure</label>
+            <select name="Depression tenure" id="">
+                <option value="None">Select</option>
+                <option value="1-3 month">1-3 month</option>
+                <option value="more than 3 months">more than 3 months</option>
+                <option value="less than a week">less than a week</option>
+                <option value="less than a month">less than a month</option>
+            </select>
+
+
+            <label for="Physical Activities">Physical Activities</label>
+            <select name="Physical Activities" id="">
+                <option value="None">Select</option>
+                <option value="30min - 1hr">30min - 1hr</option>
+                <option value="1-2 hr">1-2 hr</option>
+                <option value="2-3 hr">2-3 hr</option>
+                <option value="3-4 hr">3-4 hr</option>
+                <option value="4 + hr">4 + hr</option>
+                <option value="None">None</option>
+            </select>
+
+
+            <label for="Regular Diet">Regular Diet</label>
+            <select name="Regular Diet" id="">
+                <option value="None">Select</option>
+                <option value="4 meals/day">4 meals/day</option>
+                <option value="3 meals/day">3 meals/day</option>
+                <option value="2 meals/day">2 meals/day</option>
+                <option value="Irregular">Irregular</option>
+                <option value="5">5 meals/day</option>
+            </select>
+
+
+            <label for="Family Time">Family Time</label>
+            <select name="Family Time" id="">
+                <option value="None">Select</option>
+                <option value="Frequently">Frequently</option>
+                <option value="Sometimes">Sometimes</option>
+                <option value="Not at all">Not at all</option>
+                <option value="Once or Twice a week">Once or Twice a week</option>
+            </select>
+
+            <label for="Lost someone due to COVID">Lost someone due to COVID</label>
+            <select name="Lost someone due to COVID" id="">
+                <option value="None">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="Hours spent on your own per day">Hours spent on your own per day</label>
+            <select name="Hours spent on your own per day" id="">
+                <option value="None">Select</option>
+                <option value="More than 2">More than 2</option>
+                <option value="Not at all">Not at all</option>
+                <option value="1 - 2">1 - 2</option>
+                <option value="0 - 1">0 - 1</option>
+            </select>
+
+
+            <label for="Member of any club">Member of any club</label>
+            <select name="Member of any club" id="">
+                <option value="None">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+
+            <label for="Time With Friends">Time With Friends</label>
+            <select name="Time With Friends" id="">
+                <option value="None">Select</option>
+                <option value="Frequently">Frequently</option>
+                <option value="Sometimes">Sometimes</option>
+                <option value="Not at all">Not at all</option>
+                <option value="Once or Twice in a week">Once or Twice in a week</option>
+            </select>
+
+            <label for="Do you have Social Media Addiction">Do you have Social Media Addiction</label>
+            <select name="Do you have Social Media Addiction" id="">
+                <option value="None">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Maybe">Maybe</option>
+            </select>
+
+            <label for="Worried all the time">Worried all the time</label>
+            <select name="Worried all the time" id="">
+                <option value="None">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="Not at all">Not at all</option>
+            </select>
+
+            <label for="Got easily annoyed or irritable">Got easily annoyed or irritable</label>
+            <select name="Got easily annoyed or irritable" id="">
+                <option value="None">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="Not at all">Not at all</option>
+            </select>
+
+
+            <label for="Explorer">Explorer</label>
+            <select name="Explorer" id="">
+                <option value="None">Select</option>
+                <option value="Little">Little</option>
+                <option value="Not at all">Not at all</option>
+                <option value="love to explore">love to explore</option>
+            </select>
+
+
+            <label for="Tended to overreact on Situations">Tended to overreact on Situations</label>
+            <select name="Tended to overreact on Situations" id="">
+                <option value="None">Select</option>
+                <option value="Sometimes">Sometimes</option>
+                <option value="Frequently">Frequently</option>
+                <option value="Rarely">Rarely</option>
+                <option value="Always">Always</option>
+            </select>
+
+            <label for="Select a Quote">Select a Quote</label>
+            <select name="Select a Quote" id="">
+                <option value="None">Select</option>
+                <option value="q1">Be healthy and take care of yourself, but be happy with beautiful things that makes
+                    you,
+                    You.</option>
+                <option value="q2">Even nicest people have their limits</option>
+                <option value="q3">You will never have this day again, so make it Count.</option>
+                <option value="q4">There are wounds that never show on the body that are deeper and more hurtful than
+                    anything that bleeds.</option>
+                <option value="q5">When irritated I have learnt to be silent.</option>
+                <option value="q6">Tears come from the heart not from the brain.</option>
+                <option value="q7">Being Happy never goes out of Style</option>
+                <option value="q8">I really want to talk to someone about my thought and feeling, but I can't Express.
+                </option>
+            </select>
+
+            <button class="btn-grad" type="submit">See your mental state</button>
+
+
+        </form>
+
+        <h3>{{ prediction_text }}<h3></h3>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/50d9da7357.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@700&family=Joan&family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('../static/background.jpg') no-repeat center center;
+            padding: 0% 18%;
+        }
+
+        .container {
+            padding: 5% 3%;
+            margin: 3%;
+            box-shadow: 5px 5px 7px black;
+            border-radius: 15px;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #suggest {
+            text-align: center;
+        }
+
+        #iconDiv {
+            text-align: center;
+            padding-top: 10%;
+        }
+
+        h1 {
+            color: wheat;
+            padding: 2% 2%;
+            font-family: 'joan', sans-serif;
+            font-size: 4rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        p {
+            font-family: 'Pacifico', serif;
+            font-size: 20px;
+            color: wheat;
+            padding: 2% 2%;
+        }
+
+        #quote {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+
+        i {
+            color: #dada3a;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col">
+                <h1>Hey, Why Upset?</h1>
+                <p id="suggest">
+                    Just Cheer Up!
+                </br>
+                    You can follow some suggestions:-
+                </br>
+                    Try spending time with your Loving ones, it will help you.
+                </br>
+                    Take a break, and explore something new...
+                </br>
+                    Try playing games and do activities that you Love.
+                </br>
+                    Throw away negativity and just be Yourself !
+                </p>
+
+            </div>
+
+            <div id="iconDiv" class="col">
+                <i class="fa-solid fa-face-smile-beam fa-bounce fa-5x"></i>
+                <i class="fa-solid fa-face-smile-beam fa-bounce fa-10x"></i>
+                <i class="fa-solid fa-face-smile-beam fa-bounce fa-5x"></i>
+            </div>
+
+            <div class="col-12">
+                <p id="quote"> <b>"</b> Happiness is not by Chance, But by Choice <b>"</b></p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
